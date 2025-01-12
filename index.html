@@ -1,0 +1,451 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker Style Text with Synchronized Wave Effect and Blood Drops</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Pure black background */
+      color: #fff; /* White text color */
+      font-family: "Courier New", Courier, monospace; /* Hacker-style font */
+      font-weight: bold; /* Bold font */
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Full viewport height */
+      text-align: center;
+      overflow: hidden; /* Prevent scrollbars */
+      cursor: none; /* Hide default cursor */
+    }
+
+    .wave-text {
+      font-size: 4rem; /* Adjust font size as needed */
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      z-index: 1;
+    }
+
+    .wave-text span {
+      display: inline-block;
+      position: relative;
+      color: white; /* Text color is white */
+      overflow: hidden;
+    }
+
+    /* Wave effect inside each character */
+    .wave-text span::after {
+      content: '';
+      position: absolute;
+      top: 40%; /* Start wave at 40% height of each character */
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: rgba(255, 0, 0, 0.6); /* Red wave color */
+      clip-path: inset(0 0 40% 0); /* Restrict wave to lower part of text */
+      animation: wave 3s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translateY(0%);
+      }
+      25% {
+        transform: translateY(-10%);
+      }
+      50% {
+        transform: translateY(10%);
+      }
+      75% {
+        transform: translateY(-10%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+
+    /* Background lines for hacker-style effect */
+    .background-lines {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      transform: translate(-50%, -50%);
+      z-index: 0; /* Place background behind text */
+      pointer-events: none;
+    }
+
+    .line {
+      position: absolute;
+      background-color: #fff; /* Set pure white color for all lines */
+      transform-origin: center;
+    }
+
+    /* Horizontal lines */
+    .line-horizontal {
+      width: 600px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* Diagonal lines */
+    .line-diagonal-1,
+    .line-diagonal-2,
+    .line-diagonal-3,
+    .line-diagonal-4 {
+      background-color: #fff; /* Pure white for diagonal lines */
+    }
+
+    .line-diagonal-1 {
+      width: 600px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    .line-diagonal-2 {
+      width: 600px;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    .line-diagonal-3 {
+      width: 600px;
+      height: 1px;
+      top: 30%;
+      left: 0;
+      transform: rotate(30deg);
+    }
+
+    .line-diagonal-4 {
+      width: 600px;
+      height: 1px;
+      top: 70%;
+      left: 0;
+      transform: rotate(-30deg);
+    }
+
+    /* Blood drop styling */
+    .blood-drop {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      animation: fall 2s linear forwards;
+      pointer-events: none;
+    }
+
+    /* Falling animation */
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="wave-text">
+      <span>H</span><span>A</span><span>C</span><span>K</span>
+      <span>&nbsp;</span>
+      <span>A</span><span>N</span><span>D</span>
+      <span>&nbsp;</span>
+      <span>B</span><span>E</span><span>C</span><span>O</span><span>M</span><span>E</span>
+      <span>&nbsp;</span>
+      <span>9</span><span>2</span><span>1</span><span>1</span>
+    </div>
+    <div class="background-lines">
+      <div class="line line-horizontal"></div>
+      <div class="line line-vertical"></div>
+      <div class="line line-diagonal-1"></div>
+      <div class="line line-diagonal-2"></div>
+      <div class="line line-diagonal-3"></div>
+      <div class="line line-diagonal-4"></div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.body;
+
+    // Create a blood drop at the mouse position
+    document.addEventListener('mousemove', (e) => {
+      const drop = document.createElement('div');
+      drop.classList.add('blood-drop');
+
+      // Randomize size and drift
+      const size = Math.random() * 6 + 4; // Random size between 4px and 10px
+      const drift = (Math.random() - 0.5) * 50; // Random horizontal drift
+      const duration = Math.random() * 1 + 1; // Random duration between 1s and 2s
+
+      drop.style.width = `${size}px`;
+      drop.style.height = `${size}px`;
+      drop.style.left = `${e.pageX + drift}px`;
+      drop.style.top = `${e.pageY}px`;
+      drop.style.animationDuration = `${duration}s`;
+
+      body.appendChild(drop);
+
+      // Remove the blood drop after it finishes falling
+      drop.addEventListener('animationend', () => {
+        drop.remove();
+      });
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+ 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLO-delv</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000; /* Pure black background */
+      color: #fff; /* White text color */
+      font-family: "Courier New", Courier, monospace; /* Hacker-style font */
+      font-weight: bold; /* Bold font */
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      min-height: 100vh; /* Full viewport height */
+      text-align: center;
+      overflow: hidden; /* Prevent scrollbars */
+      cursor: none; /* Hide default cursor */
+    }
+
+    .wave-text {
+      font-size: 4vw; /* Scalable font size based on viewport width */
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      z-index: 1;
+      animation: flicker 0.4s infinite; /* Slowed down flicker effect */
+    }
+
+    .wave-text span {
+      display: inline-block;
+      position: relative;
+      color: white; /* Text color is white */
+      overflow: hidden;
+    }
+
+    /* Wave effect inside each character */
+    .wave-text span::after {
+      content: '';
+      position: absolute;
+      top: 40%; /* Start wave at 40% height of each character */
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: rgba(255, 0, 0, 0.6); /* Red wave color */
+      clip-path: inset(0 0 40% 0); /* Restrict wave to lower part of text */
+      animation: wave 6s ease-in-out infinite; /* Slowed down wave effect */
+      z-index: -1;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translateY(0%);
+      }
+      25% {
+        transform: translateY(-10%);
+      }
+      50% {
+        transform: translateY(10%);
+      }
+      75% {
+        transform: translateY(-10%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+
+    /* Flicker effect */
+    @keyframes flicker {
+      0% { opacity: 1; }
+      20% { opacity: 0.6; }
+      40% { opacity: 1; }
+      60% { opacity: 0.4; }
+      80% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+
+    /* Background lines for hacker-style effect */
+    .background-lines {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: 0; /* Place background behind text */
+      pointer-events: none;
+      animation: flicker 0.4s infinite; /* Slowed down flicker effect for background */
+    }
+
+    .line {
+      position: absolute;
+      background-color: #fff; /* Set pure white color for all lines */
+      transform-origin: center;
+    }
+
+    /* Horizontal lines */
+    .line-horizontal {
+      width: 40%; /* 80% of previous 50% width */
+      height: 1px;
+      top: 50%;
+      left: 30%; /* Centered horizontally */
+      z-index: -1;
+    }
+
+    /* Diagonal lines */
+    .line-diagonal-1,
+    .line-diagonal-2,
+    .line-diagonal-3,
+    .line-diagonal-4 {
+      background-color: #fff; /* Pure white for diagonal lines */
+    }
+
+    .line-diagonal-1 {
+      width: 40%; /* 80% of previous 50% width */
+      height: 1px;
+      top: 50%;
+      left: 30%; /* Centered horizontally */
+      transform: rotate(45deg);
+    }
+
+    .line-diagonal-2 {
+      width: 40%; /* 80% of previous 50% width */
+      height: 1px;
+      top: 50%;
+      left: 30%; /* Centered horizontally */
+      transform: rotate(-45deg);
+    }
+
+    .line-diagonal-3 {
+      width: 40%; /* 80% of previous 50% width */
+      height: 1px;
+      top: 30%;
+      left: 30%; /* Centered horizontally */
+      transform: rotate(30deg);
+    }
+
+    .line-diagonal-4 {
+      width: 40%; /* 80% of previous 50% width */
+      height: 1px;
+      top: 70%;
+      left: 30%; /* Centered horizontally */
+      transform: rotate(-30deg);
+    }
+
+    /* Blood drop styling */
+    .blood-drop {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      animation: fall 3s linear forwards; /* Slowed down fall effect */
+      pointer-events: none;
+    }
+
+    /* Falling animation */
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="wave-text">
+      <span>H</span><span>A</span><span>C</span><span>K</span>
+      <span>&nbsp;</span>
+      <span>A</span><span>N</span><span>D</span>
+      <span>&nbsp;</span>
+      <span>B</span><span>E</span><span>C</span><span>O</span><span>M</span><span>E</span>
+      <span>&nbsp;</span>
+      <span>9</span><span>2</span><span>1</span><span>1</span>
+    </div>
+    <div class="background-lines">
+      <div class="line line-horizontal"></div>
+      <div class="line line-diagonal-1"></div>
+      <div class="line line-diagonal-2"></div>
+      <div class="line line-diagonal-3"></div>
+      <div class="line line-diagonal-4"></div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.body;
+
+    // Create a blood drop at the mouse position
+    document.addEventListener('mousemove', (e) => {
+      const drop = document.createElement('div');
+      drop.classList.add('blood-drop');
+
+      // Randomize size and drift
+      const size = Math.random() * 6 + 4; // Random size between 4px and 10px
+      const drift = (Math.random() - 0.5) * 50; // Random horizontal drift
+      const duration = Math.random() * 2 + 1; // Slowed down duration between 1s and 3s
+
+      drop.style.width = `${size}px`;
+      drop.style.height = `${size}px`;
+      drop.style.left = `${e.pageX + drift}px`;
+      drop.style.top = `${e.pageY}px`;
+      drop.style.animationDuration = `${duration}s`;
+
+      body.appendChild(drop);
+
+      // Remove the blood drop after it finishes falling
+      drop.addEventListener('animationend', () => {
+        drop.remove();
+      });
+    });
+  </script>
+</body>
+</html> 
+
+
+
+
