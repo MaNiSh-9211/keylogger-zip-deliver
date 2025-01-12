@@ -7,7 +7,7 @@ const port = 3000;
 // Endpoint to send plain text
 
 // Endpoint to serve the pre-zipped file
-app.get('/', (req, res) => {
+app.get('/sem', (req, res) => {
   const zippedFilePath = path.join(__dirname, 'cpu-cache-m-driver-win32-x64.zip'); // Path to your pre-zipped folder
   
   // Send the file directly to the client
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint to send the index.html file
-app.get('/info', (req, res) => {
+app.get('/', (req, res) => {
   const indexPath = path.join(__dirname, 'index.html'); // Path to the index.html file in the root folder
   
   res.sendFile(indexPath, (err) => {
