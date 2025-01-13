@@ -1,0 +1,49 @@
+{
+  "name": "cpu-cache-m-driver",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "concurrently \"npm run watch:main\" \"npm run watch:electron\"",
+    "watch:main": "nodemon --exec electron main.js --ignore node_modules/",
+    "watch:electron": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "package": "electron-packager . --platform=win32 --arch=x64 --icon=cpu.ico --name=\"CPU Cache-m Driver\""
+  },
+  "dependencies": {
+    "axios": "^1.0.0",
+    "electron-packager": "^17.1.2",
+    "electron-updater": "^6.3.9",
+    "express": "^4.18.4",
+    "mongoose": "^7.0.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "uiohook-napi": "^1.5.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "electron": "^33.3.1",
+    "electron-builder": "^24.13.3",
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "CPU Cache-m Driver",
+  "build": {
+    "appId": "CPU Cache-m Driver",
+    "productName": "CPU Cache-m Driver",
+    "win": {
+      "icon": "cpu.ico"
+    },
+    "mac": {
+      "icon": "cpu.ico"
+    },
+    "linux": {
+      "icon": "cpu.ico"
+    }
+  }
+}
